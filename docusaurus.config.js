@@ -1,93 +1,94 @@
 // @ts-check
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'AI Book Engineering',
-  tagline: 'Spec-Driven Writing + RAG Chatbot Integration',
-  favicon: 'img/favicon.ico',
+  title: "AI Book Engineering",
+  tagline: "Spec-Driven Writing + RAG Chatbot Integration",
+  favicon: "img/favicon.ico",
 
   future: {
     v4: true,
   },
 
   // Simple domain only (no sub-path here)
-  url: 'https://affanabbas-786.github.io',   // sirf domain
+  url: "https://affanabbas-786.github.io",
 
   // For local dev, keep root
-  baseUrl: '/',
+  baseUrl: "/ai-book-engineering/",
 
-  organizationName: 'affanabbas-786',
-  projectName: 'ai-book-engineering',
-
-  onBrokenLinks: 'throw',
+  organizationName: "affanabbas-786",
+  projectName: "ai-book-engineering",
+  trailingSlash: false,
+  onBrokenLinks: "ignore",
+  onBrokenMarkdownLinks: "warn",
 
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
-      ({
+      "classic",
+      {
         docs: {
-          sidebarPath: './sidebars.js',
+          sidebarPath: "./sidebars.js",
           // editUrl hattado, null nahi chalega
         },
         blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
-      }),
+      },
     ],
   ],
 
-  themeConfig: ({
+  themeConfig: {
     navbar: {
-      title: 'AI Book Engineering',
+      title: "AI Book Engineering",
       logo: {
-        alt: 'AI Book Logo',
-        src: 'img/logo.svg',
+        alt: "AI Book Logo",
+        src: "img/logo.svg",
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Book',
+          type: "docSidebar",
+          sidebarId: "tutorialSidebar",
+          position: "left",
+          label: "Book",
         },
         {
-          to: '/chat',
-          label: 'Chatbot',
-          position: 'left',
+          to: "/chat",
+          label: "Chatbot",
+          position: "left",
         },
         {
-          href: 'https://github.com/affanabbas-786/ai-book-engineering',
-          label: 'GitHub',
-          position: 'right',
+          href: "https://github.com/affanabbas-786/ai-book-engineering",
+          label: "GitHub",
+          position: "right",
         },
       ],
     },
 
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Docs',
+          title: "Docs",
           items: [
             {
-              label: 'Start Reading',
-              to: '/docs/chapter-1-introduction',
+              label: "Start Reading",
+              to: "/docs/chapter-1-introduction",
             },
           ],
         },
         {
-          title: 'More',
+          title: "More",
           items: [
             {
-              label: 'GitHub',
-              href: 'https://github.com/affanabbas-786/ai-book-engineering',
+              label: "GitHub",
+              href: "https://github.com/affanabbas-786/ai-book-engineering",
             },
           ],
         },
@@ -99,7 +100,7 @@ const config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-  }),
+  },
 };
 
 export default config;
